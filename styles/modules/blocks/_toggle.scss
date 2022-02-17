@@ -1,0 +1,88 @@
+.toggle {
+  margin-right: 120px;
+  @include flex($align: center);
+  gap: 22px;
+
+  &__button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    margin: 0;
+    vertical-align: top;
+    @if ($primaryColor == #333333) {
+      background-color: lighten($primaryColor, 10%);
+    } @else {
+      background-color: $primaryColor;
+    }
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 1px;
+      top: 1.5px;
+      @include wh(20px, $r: 50%);
+      background-color: #24B47E;
+      box-shadow: 0 0 0 #FFFFFF;
+      transform: translateX(0);
+      transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+
+    &:checked::after {
+      transform: translateX(calc(100% + 1px));
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+  }
+
+  &__label-dark {
+    display: inline-block;
+    @if ($primaryColor == #333333) {
+      background-image: url("../../../images/dark-scheme-moon-icon.svg");
+    } @else {
+      background-image: url("../../../images/light-scheme-moon-icon.svg");
+    }
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+
+  &__label-light {
+    display: inline-block;
+    @if ($primaryColor == #333333) {
+      background-image: url("../../../images/dark-scheme-sun-icon.svg");
+    } @else {
+      background-image: url("../../../images/light-scheme-sun-icon.svg");
+    }
+    width: 28px;
+    height: 28px;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+}

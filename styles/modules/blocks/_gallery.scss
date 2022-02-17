@@ -1,0 +1,9 @@
+.gallery {
+  @include flex($justify: space-between);
+  margin-top: 80px;
+  gap: 40px;
+
+  &__img {
+    max-width: 650px;
+  }
+}

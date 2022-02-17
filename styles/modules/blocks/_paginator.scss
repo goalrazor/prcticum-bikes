@@ -1,0 +1,38 @@
+.paginator {
+  @include flex();
+  margin-top: 50px;
+  gap: 20px;
+
+  &__button {
+    @include wh(50px, $r: 50%);
+    background-color: lighten($primaryColor, 6%);
+    border: none;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__button_left:after {
+    content: "";
+    position: relative;
+    display: block;
+    @include wh(11px);
+    border-left: $secondaryColor solid 2px;
+    border-bottom: $secondaryColor solid 2px;
+    left: 15px;
+    transform: rotate(45deg);
+  }
+
+  &__button_right:after {
+    content: "";
+    position: relative;
+    display: block;
+    @include wh(11px);
+    border-top: $secondaryColor solid 2px;
+    border-right: $secondaryColor solid 2px;
+    left: 10px;
+    transform: rotate(45deg);
+  }
+}

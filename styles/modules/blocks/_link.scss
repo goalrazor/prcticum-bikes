@@ -1,0 +1,15 @@
+.link {
+  margin: 28px 34px 28px 0;
+  text-decoration: none;
+  color: $secondaryColor;
+  @include font($size: 14px);
+  transition: 0.5s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.65;
+  }
+}

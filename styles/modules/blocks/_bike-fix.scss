@@ -1,0 +1,21 @@
+.bike-fix {
+  display: block;
+  position: relative;
+  padding-left: 180px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 80px;
+
+  &__img {
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    cursor: auto;
+    width: 440px;
+    max-height: 310px;
+    position: sticky;
+    top: 347px;
+    bottom: 80px;
+  }
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Bike</title>
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <nav class="links">
+            <a href="#covering" class="link">Покрытия и градиенты</a>
+            <a href="#bikes" class="link">Велосипеды</a>
+            <a href="#exercises" class="link">Тренировки</a>
+        </nav>
+    </header>
+    <section class="lead">
+        <div class="lead__container">
+            <h1 class="lead__title">Шоссе, ТТ и Грэвел</h1>
+            <p class="lead__text">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам –
+                нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+            <button class="lead__button"></button>
+            <p class="lead__bike">Cannondale Systemsix</p>
+        </div>
+        <div class="bikes__card bike-fix">
+            <img src="./images/bikes/hw-carvelo.png" alt="Карвело" class="bikes__img bike-fix__img">
+        </div>
+        <img src="./images/title-pic.jpg" alt="" class="lead__img">
+    </section>
+    <section class="quote">
+        <img src="./images/quote-pic.jpg" alt="" class="quote__img">
+        <div class="quote__container">
+            <blockquote class="quote__text">«Катайся много или мало, долго или коротко, как хочешь - но катайся»
+            </blockquote>
+            <div class="quote__caption">
+                <cite class="quote__author">Эдди Меркс</cite>
+                <cite class="quote__author-caption">Велогонщик</cite>
+            </div>
+        </div>
+    </section>
+    <section class="covering" id="covering">
+        <h2 class="covering__title">Шоссе</h2>
+        <p class="covering__text">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
+            или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+        <div class="gallery">
+            <img src="./images/hw-pic.jpg" alt="" class="gallery__img">
+            <img src="./images/gravel-pic.jpg" alt="" class="gallery__img gallery__next-img">
+        </div>
+        <div class="paginator">
+            <button class="paginator__button paginator__button_left"></button>
+            <button class="paginator__button paginator__button_right"></button>
+        </div>
+    </section>
+    <section class="bikes" id="bikes">
+        <div class="bikes__header">
+            <h2 class="bikes__title">Велосипеды</h2>
+            <nav class="bikes__menu">
+                <a href="" class="bikes__menu-item bikes__menu-item_active">Шоссе</a>
+                <a href="" class="bikes__menu-item">Грэвел</a>
+                <a href="" class="bikes__menu-item">TT</a>
+            </nav>
+        </div>
+        <div class="bikes__images">
+            <div class="bikes__card">
+                <img src="./images/bikes/hw-carvelo.png" alt="Карвело" class="bikes__img">
+                <h3 class="bikes__caption">Cervelo Caledonia-5</h3>
+            </div>
+            <div class="bikes__card">
+                <img src="./images/bikes/hw-cannodale.png" alt="Каннодайл" class="bikes__img">
+                <h3 class="bikes__caption">Cannondale Systemsix Himod</h3>
+            </div>
+            <div class="bikes__card">
+                <img src="./images/bikes/hw-trek.png" alt="Трек" class="bikes__img">
+                <h3 class="bikes__caption">Trek Domane SL-7</h3>
+            </div>
+        </div>
+    </section>
+    <section class="exercises" id="exercises">
+        <div class="exercises__container">
+            <div class="exercises__caption">
+                <h2 class="exercises__title">Тренировки</h2>
+                <p class="exercises__text">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
+                    записать эти тренировки поможет приложение Strava, а также это приложение позволит построить
+                    тренировочный план.</p>
+            </div>
+            <div class="exercises__links">
+                <a href="" class="exercises__link">Strava</a>
+                <a href="" class="exercises__link">Komoot</a>
+            </div>
+        </div>
+        <img src="./images/exercises.jpg" alt="" class="exercises__img">
+    </section>
+    <footer class="footer">
+        <h2 class="footer__title">Подпишитесь на рассылку —</h2>
+        <form action="#" class="feedback">
+            <label for="email" class="feedback__label"></label>
+            <input type="email" class="feedback__email" id="email" name="email" placeholder="Ваш e-mail">
+            <input type="submit" class="feedback__button" value="ok">
+        </form>
+        <div class="footer__additional">
+            <p class="footer__copyright">&copy; Road Club 2021</p>
+            <div class="toggle">
+                <label for="toggle__button" class="toggle__label-light"></label>
+                <input type="checkbox" id="toggle__button" class="toggle__button">
+                <label for="toggle__button" class="toggle__label-dark"></label>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
