@@ -544,11 +544,12 @@
   border-left: 50px solid #F4F4F4;
   border-right: 50px solid #F4F4F4;
   cursor: auto;
-  width: 440px;
-  max-height: 310px;
+  width: 340px;
+  max-height: 260px;
   position: sticky;
-  top: 347px;
+  top: 420px;
   bottom: 80px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=index.css.map */
