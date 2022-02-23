@@ -4,6 +4,7 @@
   margin-top: 120px;
   margin-left: 120px;
   margin-right: 120px;
+
   &__img {
     max-width: 650px;
   }
@@ -37,5 +38,46 @@
     opacity: 0.7;
     color: darken($secondaryColor, 10%);
     margin-top: 6px;
+  }
+
+  @include desktop {
+    & {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @include tablets() {
+    & {
+      gap: 40px;
+      margin: 20px 18px 0;
+    }
+
+    &__img {
+      max-width: 450px;
+    }
+
+    &__container {
+      gap: 40px;
+    }
+
+    &__text {
+      font-size: 24px;
+    }
+
+    &__author {
+      font-size: 14px;
+    }
+
+    &__author-caption {
+      margin-top: 4px;
+      font-size: 10px;
+    }
+  }
+
+  @include phones {
+    &__img {
+      max-width: 284px;
+    }
   }
 }
