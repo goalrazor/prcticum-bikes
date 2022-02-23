@@ -20,6 +20,12 @@
   }
 }
 
+@mixin desktopPlus {
+  @media screen and (max-width: $desktopPlus) {
+    @content;
+  }
+}
+
 @mixin desktop {
     @media screen and (max-width: $desktop) {
       @content;

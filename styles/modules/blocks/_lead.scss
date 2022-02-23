@@ -2,16 +2,20 @@
   @include flex($justify: space-between);
   margin-top: 20px;
   margin-left: 120px;
+  gap: 30px;
 
   &__container {
     max-width: 460px;
-    max-height: 836px;
   }
 
   &__title {
     @include font(55px, 1.1, 700);
     letter-spacing: -0.5px;
     margin-top: 80px;
+  }
+
+  &__title-mobile {
+    display: none;
   }
 
   &__text {
@@ -62,11 +66,12 @@
     color: $secondaryColor;
     margin-top: 167px;
     margin-bottom: 0;
+    position: relative;
 
     &:after {
       content: "";
       display: inline-flex;
-      position: relative;
+      position: absolute;
       bottom: 8px;
       margin-left: 30px;
       width: 132px;
@@ -74,7 +79,83 @@
     }
   }
 
+  &__image-container {
+    position: relative;
+  }
+
   &__img {
-    max-width: 610px;
+    position: relative;
+  }
+
+  @include desktopPlus() {
+    & {
+      margin-left: 60px;
+    }
+  }
+
+  @include laptop() {
+    &__img {
+      max-width: 440px;
+    }
+
+    &__title {
+      margin-top: 40px;
+    }
+  }
+
+  @include tablets() {
+    & {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 18px 0;
+    }
+
+    &__container {
+      order: 2;
+    }
+
+    &__text {
+      margin-top: 0;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__bike {
+      display: none;
+    }
+
+    &__title-mobile {
+      display: block;
+      margin: 20px 18px 0;
+    }
+
+    &__image-container {
+      position: static;
+    }
+
+    &__button {
+      width: 100%;
+      alignment: center;
+      justify-items: center;
+      justify-content: center;
+      justify-self: center;
+    }
+
+    &__title-mobile {
+      @include font(32px, 1.5, 700);
+    }
+  }
+
+  @include phones() {
+    &__img {
+      max-width: 254px;
+    }
+
+    &__text {
+      @include font(12px, 1.5);
+    }
   }
 }

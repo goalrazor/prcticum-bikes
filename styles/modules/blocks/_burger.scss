@@ -1,0 +1,19 @@
+.burger {
+  background-image: url('../../../images/burger.svg');
+  width: 22px;
+  height: 19px;
+  margin-right: 60px;
+  display: none;
+
+  @include tablets {
+    & {
+      display: block;
+    }
+  }
+
+  @include tablets {
+    & {
+      margin-right: 18px;
+    }
+  }
+}

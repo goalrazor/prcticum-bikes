@@ -1,4 +1,5 @@
 .header {
     background-color: $primaryColor;
-    @include flex($justify: flex-end);
+    @include flex($align: center, $justify: flex-end);
+    min-height: 74px;
 }

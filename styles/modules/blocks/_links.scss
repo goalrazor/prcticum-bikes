@@ -3,4 +3,16 @@
 .links {
   @include flex(center, space-between);
   margin-right: 120px;
+
+  @include laptop() {
+    & {
+      margin-right: 60px;
+    }
+  }
+
+  @include tablets {
+    & {
+      display: none;
+    }
+  }
 }

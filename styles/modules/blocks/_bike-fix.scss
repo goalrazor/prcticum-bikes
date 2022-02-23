@@ -1,10 +1,11 @@
 .bike-fix {
-  display: block;
-  position: relative;
-  padding-left: 180px;
+  position: absolute;
   box-sizing: border-box;
+  top: 100px;
+  left: -200px;
   margin: 0;
-  padding-bottom: 80px;
+  height: 650px;
+  z-index: 1;
 
   &__img {
     border-top: 20px solid #F4F4F4;
@@ -19,4 +20,45 @@
     bottom: 80px;
     object-fit: cover;
   }
+
+  @include desktopPlus() {
+    & {
+      left: -30px;
+    }
+  }
+
+  @include laptop() {
+    &__img {
+      width: 280px;
+      border-top: 10px solid #F4F4F4;
+      border-bottom: 10px solid #F4F4F4;
+      border-left: 27px solid #F4F4F4;
+      border-right: 27px solid #F4F4F4;
+    }
+  }
+
+  @include tablets() {
+    & {
+      left: 18px;
+    }
+
+    &__img {
+      top: 200px;
+      position: relative;
+    }
+  }
+
+  @include phones() {
+    &__img {
+      width: 180px;
+      top: 40px;
+    }
+  }
+
+  @include phones-small() {
+    &__img {
+      top: 90px;
+    }
+  }
 }
+
