@@ -319,6 +319,10 @@
 }
 
 .covering {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
   margin-top: 120px;
   margin-left: 120px;
 }
@@ -329,6 +333,7 @@
   font-family: "Inter", "Arial", sans-serif;
   letter-spacing: -0.5px;
   margin: 0;
+  order: 1;
 }
 .covering__text {
   font-size: 18px;
@@ -339,6 +344,38 @@
   margin: 50px 0 0;
   color: #e6e6e6;
   opacity: 0.7;
+  order: 2;
+}
+@media screen and (max-width: 992px) {
+  .covering {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .covering {
+    margin-left: 18px;
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .covering__title {
+    display: inline-flex;
+    font-size: 32px;
+  }
+  .covering__text {
+    order: 4;
+  }
+}
+@media screen and (max-width: 480px) {
+  .covering {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  .covering__text {
+    font-size: 12px;
+    margin-top: 40px;
+  }
 }
 
 .gallery {
@@ -347,17 +384,60 @@
   justify-content: space-between;
   margin-top: 80px;
   gap: 40px;
+  position: relative;
+  order: 3;
+}
+.gallery:after {
+  content: url("../../../images/hw-icon.svg");
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/rectangle-icon.svg");
+  background-size: cover;
 }
 .gallery__img {
   max-width: 650px;
+  overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .gallery__img:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    margin-top: 40px;
+  }
+  .gallery__img {
+    max-width: 450px;
+  }
+  .gallery:after {
+    width: 70px;
+    height: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gallery__img {
+    max-width: 284px;
+  }
+  .gallery:after {
+    width: 70px;
+    height: 24px;
+  }
 }
 
 .paginator {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 50px;
   gap: 20px;
+  order: 4;
 }
 .paginator__button {
   width: 50px;
@@ -391,6 +471,28 @@
   border-right: #ffffff solid 2px;
   left: 10px;
   transform: rotate(45deg);
+}
+@media screen and (max-width: 768px) {
+  .paginator {
+    display: inline-flex;
+    order: 2;
+    margin: 0 18px 0 0;
+    gap: 10px;
+  }
+  .paginator__button {
+    width: 24px;
+    height: 24px;
+  }
+  .paginator__button_left:after {
+    width: 7px;
+    height: 7px;
+    left: 3px;
+  }
+  .paginator__button_right:after {
+    width: 7px;
+    height: 7px;
+    left: 0;
+  }
 }
 
 .bikes {
