@@ -25,7 +25,6 @@
   }
 
   @include laptop() {
-
     &__img:last-child {
       display: none;
     }

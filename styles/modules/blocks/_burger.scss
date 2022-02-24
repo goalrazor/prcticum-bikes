@@ -1,5 +1,9 @@
 .burger {
-  background-image: url('../../../images/burger.svg');
+  @if ($primaryColor == #333333) {
+    background-image: url('../../../images/burger-light.svg');
+  } @else {
+    background-image: url('../../../images/burger.svg');
+  }
   width: 22px;
   height: 19px;
   margin-right: 60px;

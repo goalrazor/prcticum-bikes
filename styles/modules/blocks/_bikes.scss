@@ -73,10 +73,6 @@
   }
 
   @include desktopPlus() {
-    & {
-      margin-left: 30px;
-      margin-right: 30px;
-    }
 
     &__card {
       max-width: 300px;
@@ -89,17 +85,27 @@
 
   @include desktop() {
     &__card {
-      max-width: 284px;
+      max-width: 254px;
     }
   }
 
   @include laptop() {
+    & {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
     &__card {
       max-width: 200px;
     }
   }
 
   @include tablets() {
+    & {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
     &__selector-container {
       display: block;
       position: relative;

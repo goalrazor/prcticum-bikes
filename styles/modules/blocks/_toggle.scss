@@ -68,7 +68,6 @@
     }
   }
 
-
   &__label-light {
     display: inline-block;
     @if ($primaryColor == #333333) {
@@ -85,4 +84,9 @@
     }
   }
 
+  @include tablets() {
+    & {
+      display: none;
+    }
+  }
 }

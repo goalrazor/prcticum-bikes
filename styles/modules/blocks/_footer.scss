@@ -5,11 +5,15 @@
   margin: 0 auto;
   width: 100%;
 
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   &__title {
     @include font(24px, 1.3, 600);
     max-width: 229px;
     margin-left: 120px;
-
   }
 
   &__additional {
@@ -25,6 +29,38 @@
       color: lighten($primaryColor, 14%);
     } @else {
       color: darken($primaryColor, 14%);
+    }
+  }
+
+  @include tablets() {
+    &__title {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 30px;
+      padding-top: 60px;
+    }
+
+    &__additional {
+      @include flex(baseline, space-between);
+      margin-top: 100px;
+      padding-bottom: 60px;
+      margin-left: 30px;
+      padding-right: 16px;
+    }
+  }
+
+  @include phones() {
+    &__title {
+      font-size: 24px;
+      margin-left: 18px;
+    }
+
+    &__additional {
+      margin-left: 18px;
+      margin-top: 100px;
+      padding-bottom: 16px;
+      padding-right: 16px;
+      align-items: center;
     }
   }
 }

@@ -28,11 +28,14 @@
 
   @include tablets() {
     & {
-      margin-left: 18px;
-      margin-top: 40px;
+      display: inline-flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin: 40px auto 0;
+      padding-left: 18px;
+      padding-right: 18px;
+
     }
 
     &__title {
