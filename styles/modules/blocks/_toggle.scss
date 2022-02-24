@@ -89,4 +89,12 @@
       display: none;
     }
   }
+
+  &_menu {
+    display: flex;
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 38px;
+    left: calc(50% - 136px / 2);
+  }
 }
