@@ -1,0 +1,50 @@
+.radio {
+  display: none;
+
+  @include tablets() {
+    & {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 36px;
+    }
+
+    &__container {
+      display: flex;
+    }
+
+    &__button {
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      @if ($primaryColor == #333333) {
+        background-color: lighten($primaryColor, 17%);
+      } @else {
+        background-color: darken($primaryColor, 17%);
+      }
+      @include wh(12px, $r:50%);
+      transition: 0.2s all linear;
+      outline: none;
+
+      &:checked {
+        background-color: $secondaryColor;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include phones() {
+    & {
+      margin-top: 20px;
+    }
+
+    &__button {
+      width: 4px;
+      height: 4px;
+    }
+  }
+}

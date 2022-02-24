@@ -63,6 +63,14 @@
     <section class="bikes" id="bikes">
         <div class="bikes__header">
             <h2 class="bikes__title">Велосипеды</h2>
+            <div class="bikes__selector-container">
+                <label for="bikes-type" class="bikes__selector-label"></label>
+                <select id="bikes-type" name="bikes-type" class="bikes__selector">
+                    <option value="Шоссе">Шоссе</option>
+                    <option value="Грэвел">Грэвел</option>
+                    <option value="ТТ">ТТ</option>
+                </select>
+            </div>
             <nav class="bikes__menu">
                 <a href="" class="bikes__menu-item bikes__menu-item_active">Шоссе</a>
                 <a href="" class="bikes__menu-item">Грэвел</a>
@@ -74,16 +82,29 @@
                 <img src="./images/bikes/hw-carvelo.png" alt="Карвело" class="bikes__img">
                 <h3 class="bikes__caption">Cervelo Caledonia-5</h3>
             </div>
-            <div class="bikes__card">
+            <div class="bikes__card bikes__card_not-active">
                 <img src="./images/bikes/hw-cannodale.png" alt="Каннодайл" class="bikes__img">
                 <h3 class="bikes__caption">Cannondale Systemsix Himod</h3>
             </div>
-            <div class="bikes__card">
+            <div class="bikes__card bikes__card_not-active">
                 <img src="./images/bikes/hw-trek.png" alt="Трек" class="bikes__img">
                 <h3 class="bikes__caption">Trek Domane SL-7</h3>
             </div>
         </div>
     </section>
+    <form action="#" class="radio">
+        <div class="radio_container">
+            <label>
+                <input type="radio" name="bikes" class="radio__button" checked>
+            </label>
+            <label>
+                <input type="radio" name="bikes" class="radio__button">
+            </label>
+            <label>
+                <input type="radio" name="bikes" class="radio__button">
+            </label>
+        </div>
+    </form>
     <section class="exercises" id="exercises">
         <div class="exercises__container">
             <div class="exercises__caption">
