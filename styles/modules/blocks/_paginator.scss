@@ -9,9 +9,14 @@
     background-color: lighten($primaryColor, 6%);
     border: none;
     transition: opacity 0.5s;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.6;
+    }
+
+    &:active {
+      outline: 1px solid $secondaryColor;
     }
   }
 
@@ -42,6 +47,9 @@
       order: 2;
       margin: 0 18px 0 90px;
       gap: 10px;
+      position: absolute;
+      top: 5px;
+      right: 18px;
     }
 
     &__button {

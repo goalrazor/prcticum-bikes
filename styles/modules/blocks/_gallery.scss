@@ -5,8 +5,7 @@
   position: relative;
   order: 3;
 
-  &:after {
-    content: url('../../../images/hw-icon.svg');
+  &__icon {
     position: absolute;
     left: 0;
     bottom: 16px;
@@ -15,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../../images/rectangle-icon.svg');
+    background-image: url('../../../images/hw-icon.svg');
     background-size: cover;
   }
 
@@ -25,7 +24,7 @@
   }
 
   @include laptop() {
-    &__img:last-child {
+    &__img:last-of-type {
       display: none;
     }
   }
@@ -36,10 +35,10 @@
     }
 
     &__img {
-      max-width: 450px;
+      max-width: 400px;
     }
 
-    &:after {
+    &__icon {
       width: 70px;
       height: 24px;
     }
@@ -48,11 +47,6 @@
   @include phones() {
     &__img {
       max-width: 284px;
-    }
-
-    &:after {
-      width: 70px;
-      height: 24px;
     }
   }
 }

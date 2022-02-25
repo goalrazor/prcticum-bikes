@@ -48,12 +48,38 @@
     </section>
     <div class="line"></div>
     <section class="covering" id="covering">
-        <h2 class="covering__title">Шоссе</h2>
-        <p class="covering__text">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
-            или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
-        <div class="gallery">
-            <img src="./images/hw-pic.jpg" alt="" class="gallery__img">
-            <img src="./images/gravel-pic.jpg" alt="" class="gallery__img gallery__next-img">
+        <div class="covering__slide">
+            <h2 class="covering__title">Шоссе</h2>
+            <p class="covering__text">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то
+                горы
+                или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+            <div class="gallery">
+                <img src="./images/hw-pic.jpg" alt="Шоссе" class="gallery__img">
+                <img src="./images/gravel-pic.jpg" alt="Грэвел" class="gallery__img gallery__next-img">
+                <div class="gallery__icon"></div>
+            </div>
+        </div>
+        <div class="covering__slide">
+            <h2 class="covering__title">Грэвел</h2>
+            <p class="covering__text">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и
+                на
+                нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.
+            <div class="gallery">
+                <img src="./images/gravel-pic.jpg" alt="Грэвел" class="gallery__img">
+                <img src="./images/tt-pic.jpg" alt="ТТ" class="gallery__img gallery__next-img">
+                <div class="gallery__icon"></div>
+            </div>
+        </div>
+        <div class="covering__slide">
+            <h2 class="covering__title">ТТ</h2>
+            <p class="covering__text">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком
+                велике
+                только по равнинному асфальту, велик очень быстрые и аэродинамичный.
+            <div class="gallery">
+                <img src="./images/tt-pic.jpg" alt="ТТ" class="gallery__img">
+                <img src="./images/hw-pic.jpg" alt="Шоссе" class="gallery__img gallery__next-img">
+                <div class="gallery__icon"></div>
+            </div>
         </div>
         <div class="paginator">
             <button class="paginator__button paginator__button_left"></button>
@@ -142,7 +168,7 @@
         </div>
     </div>
 </footer>
-<aside class="popup popup_opened">
+<aside class="popup">
     <button class="popup__close-button" type="button"></button>
     <nav class="links links_menu">
         <a href="#covering" class="link link_menu">Покрытия и градиенты</a>
@@ -155,5 +181,6 @@
         <label for="toggle__button" class="toggle__label-dark"></label>
     </div>
 </aside>
+<script src="script/index.js"></script>
 </body>
 </html>
