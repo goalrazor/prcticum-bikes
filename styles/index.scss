@@ -25,3 +25,8 @@
 @import "./modules/blocks/radio";
 @import "./modules/blocks/logo";
 @import "./modules/blocks/popup";
+
+:root .colorTheme {
+  --primaryColor: #ffffff;
+  --secondaryColor: #333333;
+}
