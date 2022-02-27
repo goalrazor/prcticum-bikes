@@ -16,11 +16,7 @@
     height: 24px;
     margin: 0;
     vertical-align: top;
-    @if ($primaryColor == #333333) {
-      background-color: lighten($primaryColor, 10%);
-    } @else {
-      background-color: $primaryColor;
-    }
+    background-color: var(--tobbleBackgroundColor);
     border-radius: 30px;
     outline: none;
     cursor: pointer;
@@ -49,19 +45,15 @@
     &:hover {
       opacity: 0.7;
     }
-
   }
 
   &__label-dark {
     display: inline-block;
-    @if ($primaryColor == #333333) {
-      background-image: url("../../../images/dark-scheme-moon-icon.svg");
-    } @else {
-      background-image: url("../../../images/light-scheme-moon-icon.svg");
-    }
+    background-image: url("../../../images/light-scheme-moon-icon.svg");
     width: 20px;
     height: 20px;
     transition: 0.5s;
+    background-size: cover;
 
     &:hover {
       opacity: 0.7;
@@ -70,14 +62,11 @@
 
   &__label-light {
     display: inline-block;
-    @if ($primaryColor == #333333) {
-      background-image: url("../../../images/dark-scheme-sun-icon.svg");
-    } @else {
-      background-image: url("../../../images/light-scheme-sun-icon.svg");
-    }
+    background-image: url("../../../images/light-scheme-sun-icon.svg");
     width: 28px;
     height: 28px;
     transition: 0.5s;
+    background-size: cover;
 
     &:hover {
       opacity: 0.7;

@@ -3,7 +3,7 @@
 
   @include tablets() {
     display: flex;
-    @if ($primaryColor == #333333) {
+    @if (var(--primaryColor) == #333333) {
         background-image: url('../../../images/logo-light.svg');
     } @else {
         background-image: url('../../../images/logo.svg');

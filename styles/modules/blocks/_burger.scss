@@ -1,5 +1,5 @@
 .burger {
-  @if ($primaryColor == #333333) {
+  @if (var(--primaryColor) == #333333) {
     background-image: url('../../../images/burger-light.svg');
   } @else {
     background-image: url('../../../images/burger.svg');
@@ -13,11 +13,6 @@
   @include tablets {
     & {
       display: block;
-    }
-  }
-
-  @include tablets {
-    & {
       margin-right: 18px;
     }
   }

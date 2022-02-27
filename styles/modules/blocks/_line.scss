@@ -5,10 +5,6 @@
     width: calc(100% - 36px);
     justify-self: center;
     margin: 80px auto 0;
-    @if ($primaryColor == #333333) {
-      border: lighten($primaryColor, 7%) solid 1px;
-    } @else {
-      border: darken($primaryColor, 7%) solid 1px;
-    }
+    border: var(--lineColor) solid 1px;
   }
 }

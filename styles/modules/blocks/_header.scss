@@ -1,5 +1,6 @@
 .header {
-    background-color: $primaryColor;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
     @include flex($align: center, $justify: flex-end);
     min-height: 74px;
 }

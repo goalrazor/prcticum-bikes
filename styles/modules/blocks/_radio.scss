@@ -18,17 +18,13 @@
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      @if ($primaryColor == #333333) {
-        background-color: lighten($primaryColor, 17%);
-      } @else {
-        background-color: darken($primaryColor, 17%);
-      }
-      @include wh(12px, $r:50%);
+      background-color: var(--radioButtonColor);
+      @include wh(12px, $r: 50%);
       transition: 0.2s all linear;
       outline: none;
 
       &:checked {
-        background-color: $secondaryColor;
+        background-color: var(--secondaryColor);
       }
 
       &:hover {

@@ -1,67 +1,3 @@
-// ------------------------------ var\const ---------------------------- //
-const covering = document.querySelector(".covering");
-const leftPaginatorButton = covering.querySelector(".paginator__button_left");
-const rightPaginatorButton = covering.querySelector(".paginator__button_right");
-const coveringSlides = covering.querySelectorAll(".covering__slide");
-const bikesCardContainer = document.querySelector(".bikes__images");
-const bikesTypeButtons = document.querySelectorAll('.bikes__menu-item');
-const bikesSelector = document.querySelector(".bikes__selector")
-const bikeOptions = bikesSelector.querySelectorAll('.bike-option');
-const radioButtons = document.querySelectorAll('.radio__button');
-const feedbackInput = document.querySelector('.feedback__email');
-const feedbackButton = document.querySelector('.feedback__button');
-const burger = document.querySelector('.burger');
-const popup = document.querySelector('.popup');
-const popupCloseButton = document.querySelector('.popup__close-button');
-const linksInMenu = document.querySelectorAll('.link_menu');
-
-let currentSlideNum = 0;
-
-const bikesCardsInfo = [
-    [
-        {
-            bikeName: "Cervelo Caledonia-5",
-            src: "./images/bikes/hw-carvelo.png",
-        },
-        {
-            bikeName: "Cannondale Systemsix Himod",
-            src: "./images/bikes/hw-cannodale.png"
-        },
-        {
-            bikeName: "Trek Domane SL-7",
-            src: "./images/bikes/hw-trek.png",
-        }
-    ],
-    [
-        {
-            bikeName: "Cervelo Aspero GRX 810",
-            src: "./images/bikes/gravel-carvelo.png",
-        },
-        {
-            bikeName: "Specialized S-Works Diverge",
-            src: "./images/bikes/gravel-specialized.png"
-        },
-        {
-            bikeName: "Cannondale Topstone Lefty 3",
-            src: "./images/bikes/gravel-cannodale.png",
-        }
-    ],
-    [
-        {
-            bikeName: "Specialized S-Works Shiv",
-            src: "./images/bikes/tt-specialized.png",
-        },
-        {
-            bikeName: "BMC Timemachine 01 ONE",
-            src: "./images/bikes/tt-bmc.png"
-        },
-        {
-            bikeName: "Cervelo P-Series",
-            src: "./images/bikes/tt-carvelo.png",
-        }
-    ],
-]
-
 // ------------------------------ functions ---------------------------- //
 
 function getGalleryIconUrl(galleryImg) {
@@ -111,7 +47,8 @@ function renderBikeCards(cardInfo) {
     const bikeCardSrc = bikesCardElement.querySelector(".bikes__img")
 
     bikeCardSrc.src = cardInfo.src;
-    bikeCardSrc.alt = cardInfo.bikeName
+    bikeCardSrc.alt = cardInfo.bikeName;
+    bikesCardElement.href = cardInfo.link;
     bikesCardElement.querySelector(".bikes__caption").textContent = cardInfo.bikeName;
 
     return bikesCardElement;
@@ -151,15 +88,61 @@ function handleRadio(index) {
         bikesCards[index].classList.remove('bikes__card_not-active');
     }
 }
+
+function setDarkIcons() {
+    popupClose.style
+        .setProperty('background-image', 'url(\'../../../images/close-icon.svg\')');
+    toggleLabelLight.style
+        .setProperty('background-image', 'url(\'../../../images/dark-scheme-sun-icon.svg\')');
+    toggleLabelDark.style
+        .setProperty('background-image', 'url(\'../../../images/dark-scheme-moon-icon.svg\')');
+    burger.style
+        .setProperty('background-image', 'url(\'../../../images/burger-light.svg\')');
+    logo.style
+        .setProperty('background-image', 'url(\'../../../images/logo-light.svg\')');
+}
+
+function setLightIcons() {
+    popupClose.style
+        .setProperty('background-image', 'url(\'../../../images/close-icon-dark.svg\')');
+    toggleLabelLight.style
+        .setProperty('background-image', 'url(\'../../../images/light-scheme-sun-icon.svg\')');
+    toggleLabelDark.style
+        .setProperty('background-image', 'url(\'../../../images/light-scheme-moon-icon.svg\')');
+    burger.style
+        .setProperty('background-image', 'url(\'../../../images/burger.svg\')');
+    logo.style
+        .setProperty('background-image', 'url(\'../../../images/logo.svg\')');
+}
+
+function handleToggle() {
+    const themeElements = document.querySelectorAll('.colorTheme');
+    if (toggleButton.checked || togglebuttonMobile.checked) {
+        themeElements.forEach((el) => {
+            el.classList.add('colorThemeDark');
+        });
+        setDarkIcons();
+    } else {
+        themeElements.forEach((el) => {
+            el.classList.remove('colorThemeDark');
+        })
+        setLightIcons();
+    }
+}
+
 // ------------------------------ listeners ---------------------------- //
 rightPaginatorButton.addEventListener("click", slideLeft);
 leftPaginatorButton.addEventListener("click", slideRight);
 
 for (let i = 0; i < bikesTypeButtons.length; i++) {
     bikesTypeButtons[i].addEventListener('click', function (evt) {
+        for (let k = 0; k < bikesTypeButtons.length; k++) {
+            bikesTypeButtons[k].classList.remove('bikes__menu-item_active')
+        }
         event.preventDefault();
         handleBikesCard(i);
         handleRadio(i);
+        bikesTypeButtons[i].classList.add('bikes__menu-item_active')
     });
 }
 
@@ -210,7 +193,7 @@ feedbackButton.addEventListener('click', (evt) => {
     feedbackInput.setAttributeNS(null, "disabled", "");
 })
 
-burger.addEventListener('click', ()=> {
+burger.addEventListener('click', () => {
     popup.classList.add('popup_opened');
 })
 
@@ -219,10 +202,17 @@ popupCloseButton.addEventListener('click', () => {
 })
 
 linksInMenu.forEach(el => {
-    el.addEventListener('click', () =>{
+    el.addEventListener('click', () => {
         popup.classList.remove('popup_opened');
     })
 })
+
+toggleButton.addEventListener('click', () => {
+    handleToggle();
+});
+togglebuttonMobile.addEventListener('click', () => {
+    handleToggle();
+});
 
 // ------------------------------ execution ---------------------------- //
 

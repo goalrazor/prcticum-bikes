@@ -1,7 +1,7 @@
 .footer {
-  background-color: darken($primaryColor, 2%);
+  background-color: var(--footerColor);
   padding-top: 80px;
-  color: $secondaryColor;
+  color: var(--secondaryColor);
   margin: 0 auto;
   width: 100%;
 
@@ -25,19 +25,19 @@
 
   &__copyright {
     @include font(14px, 1.4, 600);
-    @if ($primaryColor == #333333) {
-      color: lighten($primaryColor, 14%);
-    } @else {
-      color: darken($primaryColor, 14%);
-    }
+    color: var(--iconColor);
   }
 
   @include tablets() {
+    & {
+      padding-top: 60px;
+    }
+
     &__title {
       margin-top: 0;
       margin-bottom: 0;
       margin-left: 30px;
-      padding-top: 60px;
+      padding-top: 0;
     }
 
     &__additional {
@@ -57,7 +57,7 @@
 
     &__additional {
       margin-left: 18px;
-      margin-top: 100px;
+      margin-top: 90px;
       padding-bottom: 16px;
       padding-right: 16px;
       align-items: center;

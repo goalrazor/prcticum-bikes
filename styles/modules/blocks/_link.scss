@@ -1,7 +1,7 @@
 .link {
   margin: 28px 34px 28px 0;
   text-decoration: none;
-  color: $secondaryColor;
+  color: inherit;
   @include font($size: 14px);
   transition: 0.5s;
 

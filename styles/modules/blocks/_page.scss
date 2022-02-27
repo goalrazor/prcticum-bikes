@@ -1,8 +1,8 @@
 .page {
     @include font();
     max-width: 1440px;
-    background-color: $primaryColor;
-    color: $secondaryColor;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
     margin: 0 auto;
 }
 

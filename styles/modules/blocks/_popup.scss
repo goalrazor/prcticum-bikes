@@ -14,7 +14,7 @@
   box-sizing: border-box;
 
   &_opened {
-    background-color: $primaryColor;
+    background-color: var(--primaryColor);
     visibility: visible;
     opacity: 1;
     width: 100%;
@@ -23,7 +23,7 @@
   }
 
   &__close-button {
-    background-image: url('../../../images/close-icon.svg');
+    background-image: url('../../../images/close-icon-dark.svg');
     width: 15px;
     height: 15px;
     margin: 30px;

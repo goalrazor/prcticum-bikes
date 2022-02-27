@@ -2,8 +2,8 @@
 @import "../vendor/normalize.css";
 @import "../vendor/fonts/font.css";
 .body {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
   margin: 0 auto;
   width: 100%;
 }
@@ -14,13 +14,14 @@
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   max-width: 1440px;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
   margin: 0 auto;
 }
 
 .header {
-  background-color: #333333;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -30,7 +31,7 @@
 .link {
   margin: 28px 34px 28px 0;
   text-decoration: none;
-  color: #ffffff;
+  color: inherit;
   font-size: 14px;
   line-height: 1.3;
   font-weight: 400;
@@ -72,7 +73,7 @@
 }
 
 .burger {
-  background-image: url("../../../images/burger-light.svg");
+  background-image: url("../../../images/burger.svg");
   width: 22px;
   height: 19px;
   margin-right: 60px;
@@ -108,6 +109,7 @@
   font-family: "Inter", "Arial", sans-serif;
   letter-spacing: -0.5px;
   margin-top: 80px;
+  margin-bottom: 0;
 }
 .lead__title-mobile {
   display: none;
@@ -118,8 +120,9 @@
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   opacity: 0.7;
-  color: #e6e6e6;
+  color: var(--thirdPartColor);
   margin-top: 50px;
+  margin-bottom: 0;
 }
 .lead__button {
   font-size: 14px;
@@ -161,7 +164,7 @@
   line-height: 1;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
-  color: #ffffff;
+  color: var(--secondaryColor);
   margin-top: 167px;
   margin-bottom: 0;
   position: relative;
@@ -215,7 +218,8 @@
   }
   .lead__title-mobile {
     display: block;
-    margin: 20px 18px 0;
+    margin: 0 18px 0;
+    line-height: 1.2;
   }
   .lead__image-container {
     position: static;
@@ -225,6 +229,7 @@
     justify-items: center;
     justify-content: center;
     justify-self: center;
+    margin-top: 40px;
   }
   .lead__title-mobile {
     font-size: 32px;
@@ -291,7 +296,7 @@
   font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
   opacity: 0.7;
-  color: #e6e6e6;
+  color: var(--thirdPartColor);
   margin-top: 6px;
 }
 @media screen and (max-width: 1200px) {
@@ -353,7 +358,7 @@
   font-family: "Inter", "Arial", sans-serif;
   max-width: 460px;
   margin: 50px 0 0;
-  color: #e6e6e6;
+  color: var(--thirdPartColor);
   opacity: 0.7;
   order: 2;
 }
@@ -383,6 +388,7 @@
     display: inline-flex;
     font-size: 32px;
     order: 1;
+    margin-top: 40px;
   }
   .covering__text {
     order: 4;
@@ -391,8 +397,7 @@
 }
 @media screen and (max-width: 480px) {
   .covering {
-    margin-left: 18px;
-    margin-right: 18px;
+    margin: 0 auto;
   }
   .covering__text {
     font-size: 12px;
@@ -460,7 +465,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #424242;
+  background-color: var(--buttonColor);
   border: none;
   transition: opacity 0.5s;
   cursor: pointer;
@@ -469,7 +474,7 @@
   opacity: 0.6;
 }
 .paginator__button:active {
-  outline: 1px solid #ffffff;
+  outline: 1px solid var(--secondaryColor);
 }
 .paginator__button_left:after {
   content: "";
@@ -477,8 +482,8 @@
   display: block;
   width: 11px;
   height: 11px;
-  border-left: #ffffff solid 2px;
-  border-bottom: #ffffff solid 2px;
+  border-left: var(--secondaryColor) solid 2px;
+  border-bottom: var(--secondaryColor) solid 2px;
   left: 15px;
   transform: rotate(45deg);
 }
@@ -488,15 +493,15 @@
   display: block;
   width: 11px;
   height: 11px;
-  border-top: #ffffff solid 2px;
-  border-right: #ffffff solid 2px;
+  border-top: var(--secondaryColor) solid 2px;
+  border-right: var(--secondaryColor) solid 2px;
   left: 10px;
   transform: rotate(45deg);
 }
 @media screen and (max-width: 768px) {
   .paginator {
     order: 2;
-    margin: 0 18px 0 90px;
+    margin: 40px 0 0 90px;
     gap: 10px;
     position: absolute;
     top: 5px;
@@ -542,11 +547,11 @@
 }
 .bikes__menu-item {
   text-decoration: none;
-  color: #e6e6e6;
+  color: var(--thirdPartColor);
   opacity: 0.7;
 }
 .bikes__menu-item_active {
-  color: #ffffff;
+  color: var(--secondaryColor);
   opacity: 1;
 }
 .bikes__menu-item_active:hover {
@@ -568,6 +573,7 @@
   justify-content: center;
   flex-direction: column;
   max-width: 380px;
+  text-decoration: none;
 }
 .bikes__img {
   max-width: 340px;
@@ -586,6 +592,8 @@
   white-space: nowrap;
   overflow: hidden;
   margin: 22px 0 0;
+  color: var(--secondaryColor);
+  text-decoration: none;
 }
 .bikes__selector-container {
   display: none;
@@ -631,7 +639,7 @@
     background-color: transparent;
     width: 114px;
     height: 30px;
-    color: #ffffff;
+    color: var(--secondaryColor);
     padding-left: 12px;
     appearance: none;
     -moz-appearance: none;
@@ -643,8 +651,8 @@
     width: 7px;
     height: 7px;
     display: inline-block;
-    border-bottom: #ffffff solid 2px;
-    border-right: #ffffff solid 2px;
+    border-bottom: var(--secondaryColor) solid 2px;
+    border-right: var(--secondaryColor) solid 2px;
     transform: rotate(45deg);
     top: 7px;
     left: 94px;
@@ -681,11 +689,12 @@
   .bikes__img {
     border: none;
     box-shadow: none;
+    max-width: 254px;
   }
   .bikes__caption {
     text-align: center;
-    color: #333333;
     font-size: 14px;
+    margin-top: 3px;
   }
 }
 
@@ -790,7 +799,7 @@
   line-height: 1.6;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
-  color: #e6e6e6;
+  color: var(--thirdPartColor);
   opacity: 0.7;
 }
 .exercises__links {
@@ -805,7 +814,7 @@
   font-weight: 600;
   font-family: "Inter", "Arial", sans-serif;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--secondaryColor);
   transition: opacity 0.5s;
 }
 .exercises__link:hover {
@@ -885,9 +894,9 @@
 }
 
 .footer {
-  background-color: #2e2e2e;
+  background-color: var(--footerColor);
   padding-top: 80px;
-  color: #ffffff;
+  color: var(--secondaryColor);
   margin: 0 auto;
   width: 100%;
 }
@@ -916,14 +925,17 @@
   line-height: 1.4;
   font-weight: 600;
   font-family: "Inter", "Arial", sans-serif;
-  color: #575757;
+  color: var(--iconColor);
 }
 @media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 60px;
+  }
   .footer__title {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 30px;
-    padding-top: 60px;
+    padding-top: 0;
   }
   .footer__additional {
     display: flex;
@@ -942,7 +954,7 @@
   }
   .footer__additional {
     margin-left: 18px;
-    margin-top: 100px;
+    margin-top: 90px;
     padding-bottom: 16px;
     padding-right: 16px;
     align-items: center;
@@ -958,13 +970,13 @@
   line-height: 2;
   font-weight: 500;
   font-family: "Inter", "Arial", sans-serif;
-  background-color: #2e2e2e;
-  color: #ffffff;
+  background-color: var(--footerColor);
+  color: var(--secondaryColor);
   width: 100%;
   max-width: 360px;
   height: 50px;
   border-radius: 4px;
-  border: 1px rgba(125, 125, 125, 0.5) solid;
+  border: 1px var(--borderColor) solid;
   box-sizing: border-box;
   padding-left: 20px;
   cursor: pointer;
@@ -974,7 +986,7 @@
   line-height: 2;
   font-weight: 500;
   font-family: "Inter", "Arial", sans-serif;
-  color: #ffffff;
+  color: inherit;
   opacity: 0.5;
   -moz-transition: 0.5s;
   transition: 0.5s;
@@ -984,7 +996,7 @@
   line-height: 2;
   font-weight: 500;
   font-family: "Inter", "Arial", sans-serif;
-  color: #ffffff;
+  color: inherit;
   opacity: 0.5;
   -ms-transition: 0.5s;
   transition: 0.5s;
@@ -994,13 +1006,13 @@
   line-height: 2;
   font-weight: 500;
   font-family: "Inter", "Arial", sans-serif;
-  color: #ffffff;
+  color: inherit;
   opacity: 0.5;
   transition: 0.5s;
 }
 .feedback__email:focus {
   outline: none;
-  border: 1px #7d7d7d solid;
+  border: 1px var(--borderColor) solid;
 }
 .feedback__email:focus::-moz-placeholder {
   color: transparent;
@@ -1028,7 +1040,7 @@
   left: -40px;
   vertical-align: middle;
   background-color: transparent;
-  color: #ffffff;
+  color: inherit;
   font-size: 13px;
   line-height: 2.1;
   font-weight: 500;
@@ -1075,7 +1087,7 @@
   height: 24px;
   margin: 0;
   vertical-align: top;
-  background-color: #4d4d4d;
+  background-color: var(--tobbleBackgroundColor);
   border-radius: 30px;
   outline: none;
   cursor: pointer;
@@ -1106,20 +1118,22 @@
 }
 .toggle__label-dark {
   display: inline-block;
-  background-image: url("../../../images/dark-scheme-moon-icon.svg");
+  background-image: url("../../../images/light-scheme-moon-icon.svg");
   width: 20px;
   height: 20px;
   transition: 0.5s;
+  background-size: cover;
 }
 .toggle__label-dark:hover {
   opacity: 0.7;
 }
 .toggle__label-light {
   display: inline-block;
-  background-image: url("../../../images/dark-scheme-sun-icon.svg");
+  background-image: url("../../../images/light-scheme-sun-icon.svg");
   width: 28px;
   height: 28px;
   transition: 0.5s;
+  background-size: cover;
 }
 .toggle__label-light:hover {
   opacity: 0.7;
@@ -1143,7 +1157,7 @@
     width: calc(100% - 36px);
     justify-self: center;
     margin: 80px auto 0;
-    border: #454545 solid 1px;
+    border: var(--lineColor) solid 1px;
   }
 }
 
@@ -1165,7 +1179,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #5e5e5e;
+    background-color: var(--radioButtonColor);
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -1173,7 +1187,7 @@
     outline: none;
   }
   .radio__button:checked {
-    background-color: #ffffff;
+    background-color: var(--secondaryColor);
   }
   .radio__button:hover {
     opacity: 0.7;
@@ -1195,7 +1209,7 @@
 @media screen and (max-width: 768px) {
   .logo {
     display: flex;
-    background-image: url("../../../images/logo-light.svg");
+    background-image: url("../../../images/logo.svg");
     width: 38px;
     height: 38px;
     background-size: cover;
@@ -1218,7 +1232,7 @@
   box-sizing: border-box;
 }
 .popup_opened {
-  background-color: #333333;
+  background-color: var(--primaryColor);
   visibility: visible;
   opacity: 1;
   width: 100%;
@@ -1226,7 +1240,7 @@
   z-index: 3;
 }
 .popup__close-button {
-  background-image: url("../../../images/close-icon.svg");
+  background-image: url("../../../images/close-icon-dark.svg");
   width: 15px;
   height: 15px;
   margin: 30px;
@@ -1242,4 +1256,30 @@
 .popup__close-button:hover {
   opacity: 0.6;
   transition: 0.5s ease;
+}
+
+:root .colorTheme {
+  --primaryColor: #f4f4f4;
+  --secondaryColor: #151515;
+  --thirdPartColor: #222222;
+  --footerColor: #efefef;
+  --borderColor: rgba(199, 199, 199, 0.5);
+  --iconColor: #cfcfcf;
+  --lineColor: #e3e3e3;
+  --buttonColor: #ebebeb;
+  --radioButtonColor: #ececec;
+  --tobbleBackgroundColor: #ffffff;
+}
+
+:root .colorThemeDark {
+  --primaryColor: #333333;
+  --secondaryColor: #ffffff;
+  --thirdPartColor: #e5e5e5;
+  --footerColor: #2f2f2f;
+  --borderColor: rgba(125, 125, 125, 0.5);
+  --iconColor: #565656;
+  --lineColor: #565656;
+  --buttonColor: #434343;
+  --radioButtonColor: #434343;
+  --tobbleBackgroundColor: #545454;
 }/*# sourceMappingURL=index.css.map */

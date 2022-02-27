@@ -36,7 +36,7 @@
     @include font(16px, 1.7);
     font-style: normal;
     opacity: 0.7;
-    color: darken($secondaryColor, 10%);
+    color: var(--thirdPartColor);
     margin-top: 6px;
   }
 

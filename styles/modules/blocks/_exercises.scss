@@ -28,7 +28,7 @@
   &__text {
     margin-top: 50px;
     @include font(18px, 1.6);
-    color: darken($secondaryColor, 10%);
+    color: var(--thirdPartColor);
     opacity: 0.7;
   }
 
@@ -40,7 +40,7 @@
   &__link {
     @include font(18px, 1.6, 600);
     text-decoration: none;
-    color: $secondaryColor;
+    color: var(--secondaryColor);
     transition: opacity 0.5s;
 
     &:hover {
