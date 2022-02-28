@@ -75,6 +75,10 @@
     display: none;
   }
 
+  &_place_lead {
+    margin: 0;
+  }
+
   @include desktopPlus() {
 
     &__card {

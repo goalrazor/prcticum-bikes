@@ -1,7 +1,7 @@
 // ------------------------------ var\const ---------------------------- //
 const covering = document.querySelector(".covering");
-const leftPaginatorButton = covering.querySelector(".paginator__button_left");
-const rightPaginatorButton = covering.querySelector(".paginator__button_right");
+const leftPaginatorButton = covering.querySelector(".paginator__button_place_left");
+const rightPaginatorButton = covering.querySelector(".paginator__button_place_right");
 const coveringSlides = covering.querySelectorAll(".covering__slide");
 const bikesCardContainer = document.querySelector(".bikes__images");
 const bikesTypeButtons = document.querySelectorAll('.bikes__menu-item');
@@ -13,7 +13,7 @@ const feedbackButton = document.querySelector('.feedback__button');
 const burger = document.querySelector('.burger');
 const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelector('.popup__close-button');
-const linksInMenu = document.querySelectorAll('.link_menu');
+const linksInMenu = document.querySelectorAll('.link_place_menu');
 const toggleButton = document.querySelector('.toggle__button');
 const togglebuttonMobile = document.querySelector('#toggle__button-mobile');
 const popupClose = document.querySelector('.popup__close-button');

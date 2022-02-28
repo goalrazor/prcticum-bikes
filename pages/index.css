@@ -70,7 +70,7 @@
     display: none;
   }
 }
-.links_menu {
+.links_place_menu {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -93,7 +93,7 @@
 .link:hover {
   opacity: 0.65;
 }
-.link_menu {
+.link_place_menu {
   margin: 0;
   font-size: 18px;
 }
@@ -514,7 +514,7 @@
 .paginator__button:active {
   outline: 1px solid var(--secondaryColor);
 }
-.paginator__button_left:after {
+.paginator__button_place_left:after {
   content: "";
   position: relative;
   display: block;
@@ -525,7 +525,7 @@
   left: 15px;
   transform: rotate(45deg);
 }
-.paginator__button_right:after {
+.paginator__button_place_right:after {
   content: "";
   position: relative;
   display: block;
@@ -549,12 +549,12 @@
     width: 24px;
     height: 24px;
   }
-  .paginator__button_left:after {
+  .paginator__button_place_left:after {
     width: 7px;
     height: 7px;
     left: 3px;
   }
-  .paginator__button_right:after {
+  .paginator__button_place_right:after {
     width: 7px;
     height: 7px;
     left: 0;
@@ -638,6 +638,9 @@
 }
 .bikes__selector-label {
   display: none;
+}
+.bikes_place_lead {
+  margin: 0;
 }
 @media screen and (max-width: 1320px) {
   .bikes__card {
@@ -1127,34 +1130,30 @@
 .toggle__button:hover {
   opacity: 0.7;
 }
-.toggle__label-dark {
+.toggle__label {
   display: inline-block;
-  background-image: url("../images/light-scheme-moon-icon.svg");
   width: 20px;
   height: 20px;
   transition: 0.5s;
   background-size: cover;
 }
-.toggle__label-dark:hover {
+.toggle__label:hover {
   opacity: 0.7;
 }
-.toggle__label-light {
-  display: inline-block;
+.toggle__label_theme_dark {
+  background-image: url("../images/light-scheme-moon-icon.svg");
+}
+.toggle__label_theme_light {
   background-image: url("../images/light-scheme-sun-icon.svg");
   width: 28px;
   height: 28px;
-  transition: 0.5s;
-  background-size: cover;
-}
-.toggle__label-light:hover {
-  opacity: 0.7;
 }
 @media screen and (max-width: 768px) {
   .toggle {
     display: none;
   }
 }
-.toggle_menu {
+.toggle_place_menu {
   display: flex;
   justify-self: flex-end;
   position: absolute;

@@ -20,7 +20,7 @@
     }
   }
 
-  &__button_left:after {
+  &__button_place_left:after {
     content: "";
     position: relative;
     display: block;
@@ -31,7 +31,7 @@
     transform: rotate(45deg);
   }
 
-  &__button_right:after {
+  &__button_place_right:after {
     content: "";
     position: relative;
     display: block;
@@ -57,12 +57,12 @@
       height: 24px;
     }
 
-    &__button_left:after {
+    &__button_place_left:after {
       @include wh(7px);
       left: 3px;
     }
 
-    &__button_right:after {
+    &__button_place_right:after {
       @include wh(7px);
       left: 0;
     }
