@@ -4,11 +4,11 @@ function getGalleryIconUrl(galleryImg) {
     const iconType = galleryImg.src.slice(galleryImg.src.lastIndexOf('/'));
     switch (iconType) {
         case "/hw-pic.jpg":
-            return "../../../images/hw-icon.svg";
+            return "../images/hw-icon.svg";
         case "/gravel-pic.jpg":
-            return "../../../images/gravel-icon.svg";
+            return "../images/gravel-icon.svg";
         case "/tt-pic.jpg":
-            return "../../../images/tt-icon.svg";
+            return "../images/tt-icon.svg";
     }
 }
 
@@ -91,41 +91,41 @@ function handleRadio(index) {
 
 function setDarkIcons() {
     popupClose.style
-        .setProperty('background-image', 'url(\'../../../images/close-icon.svg\')');
+        .setProperty('background-image', 'url(\'./images/close-icon.svg\')');
     toggleLabelLight.style
-        .setProperty('background-image', 'url(\'../../../images/dark-scheme-sun-icon.svg\')');
+        .setProperty('background-image', 'url(\'./images/dark-scheme-sun-icon.svg\')');
     toggleLabelDark.style
-        .setProperty('background-image', 'url(\'../../../images/dark-scheme-moon-icon.svg\')');
+        .setProperty('background-image', 'url(\'./images/dark-scheme-moon-icon.svg\')');
     burger.style
-        .setProperty('background-image', 'url(\'../../../images/burger-light.svg\')');
+        .setProperty('background-image', 'url(\'./images/burger-light.svg\')');
     logo.style
-        .setProperty('background-image', 'url(\'../../../images/logo-light.svg\')');
+        .setProperty('background-image', 'url(\'./images/logo-light.svg\')');
 }
 
 function setLightIcons() {
     popupClose.style
-        .setProperty('background-image', 'url(\'../../../images/close-icon-dark.svg\')');
+        .setProperty('background-image', 'url(\'./images/close-icon-dark.svg\')');
     toggleLabelLight.style
-        .setProperty('background-image', 'url(\'../../../images/light-scheme-sun-icon.svg\')');
+        .setProperty('background-image', 'url(\'./images/light-scheme-sun-icon.svg\')');
     toggleLabelDark.style
-        .setProperty('background-image', 'url(\'../../../images/light-scheme-moon-icon.svg\')');
+        .setProperty('background-image', 'url(\'./images/light-scheme-moon-icon.svg\')');
     burger.style
-        .setProperty('background-image', 'url(\'../../../images/burger.svg\')');
+        .setProperty('background-image', 'url(\'./images/burger.svg\')');
     logo.style
-        .setProperty('background-image', 'url(\'../../../images/logo.svg\')');
+        .setProperty('background-image', 'url(\'./images/logo.svg\')');
 }
 
 function handleToggle() {
-    const themeElements = document.querySelectorAll('.colorTheme');
+    const themeElements = document.querySelectorAll('.color-theme');
     if (toggleButton.checked || togglebuttonMobile.checked) {
         themeElements.forEach((el) => {
-            el.classList.add('colorThemeDark');
+            el.classList.add('color-theme_dark');
         });
         setDarkIcons();
     } else {
         themeElements.forEach((el) => {
-            el.classList.remove('colorThemeDark');
-        })
+            el.classList.remove('color-theme_dark');
+        });
         setLightIcons();
     }
 }
@@ -135,7 +135,7 @@ rightPaginatorButton.addEventListener("click", slideLeft);
 leftPaginatorButton.addEventListener("click", slideRight);
 
 for (let i = 0; i < bikesTypeButtons.length; i++) {
-    bikesTypeButtons[i].addEventListener('click', function (evt) {
+    bikesTypeButtons[i].addEventListener('click', () => {
         for (let k = 0; k < bikesTypeButtons.length; k++) {
             bikesTypeButtons[k].classList.remove('bikes__menu-item_active')
         }

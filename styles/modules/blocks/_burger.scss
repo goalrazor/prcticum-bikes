@@ -1,8 +1,8 @@
 .burger {
   @if (var(--primaryColor) == #333333) {
-    background-image: url('../../../images/burger-light.svg');
+    background-image: url('../images/burger-light.svg');
   } @else {
-    background-image: url('../../../images/burger.svg');
+    background-image: url('../images/burger.svg');
   }
   width: 22px;
   height: 19px;

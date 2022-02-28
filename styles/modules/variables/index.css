@@ -1,1 +1,25 @@
-/*# sourceMappingURL=index.css.map */
+:root .color-theme {
+  --primaryColor: #f4f4f4;
+  --secondaryColor: #151515;
+  --thirdPartColor: #222222;
+  --footerColor: #efefef;
+  --borderColor: rgba(199, 199, 199, 0.5);
+  --iconColor: #cfcfcf;
+  --lineColor: #e3e3e3;
+  --buttonColor: #ebebeb;
+  --radioButtonColor: #ececec;
+  --tobbleBackgroundColor: #ffffff;
+}
+
+:root .color-theme_dark {
+  --primaryColor: #333333;
+  --secondaryColor: #ffffff;
+  --thirdPartColor: #e5e5e5;
+  --footerColor: #2f2f2f;
+  --borderColor: rgba(125, 125, 125, 0.5);
+  --iconColor: #565656;
+  --lineColor: #565656;
+  --buttonColor: #434343;
+  --radioButtonColor: #434343;
+  --tobbleBackgroundColor: #545454;
+}/*# sourceMappingURL=index.css.map */

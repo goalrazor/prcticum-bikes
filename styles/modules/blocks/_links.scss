@@ -1,5 +1,3 @@
-@import "link";
-
 .links {
   @include flex(center, space-between);
   margin-right: 120px;
