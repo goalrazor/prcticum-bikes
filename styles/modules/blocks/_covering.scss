@@ -58,6 +58,12 @@
       order: 4;
       max-width: 400px;
     }
+
+    &:after {
+      @include blockUnderLine();
+      margin: 80px auto 0;
+      order: 4;
+    }
   }
 
   @include phones() {
