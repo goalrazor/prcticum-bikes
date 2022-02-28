@@ -73,6 +73,10 @@
       margin-top: 4px;
       font-size: 10px;
     }
+
+    &:after {
+      @include blockUnderLine();
+    }
   }
 
   @include phones {

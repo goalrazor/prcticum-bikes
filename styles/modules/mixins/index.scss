@@ -31,30 +31,39 @@
       @content;
     }
   }
-  
+
   @mixin laptop {
     @media screen and (max-width: $laptop) {
       @content;
     }
   }
-  
+
   @mixin tablets {
     @media screen and (max-width: $tablets) {
       @content;
     }
   }
-  
+
   @mixin phones {
     @media screen and (max-width: $phones) {
       @content;
     }
   }
-  
+
   @mixin phones-small {
     @media screen and (max-width: $phones-small) {
       @content;
     }
   }
+
+@mixin blockUnderLine() {
+  content: "";
+  display: block;
+  width: calc(100% - 36px);
+  justify-self: center;
+  margin: 80px auto 0;
+  border: var(--lineColor) solid 1px;
+}
 
   %clearfix {
     &:after {

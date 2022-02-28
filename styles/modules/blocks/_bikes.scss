@@ -165,6 +165,10 @@
     &__card {
       max-width: 380px;
     }
+
+    &:after {
+      @include blockUnderLine();
+    }
   }
 
   @include phones() {

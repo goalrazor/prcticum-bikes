@@ -259,6 +259,14 @@
     font-weight: 700;
     font-family: "Inter", "Arial", sans-serif;
   }
+  .lead:after {
+    content: "";
+    display: block;
+    width: calc(100% - 36px);
+    justify-self: center;
+    margin: 80px auto 0;
+    border: var(--lineColor) solid 1px;
+  }
 }
 @media screen and (max-width: 480px) {
   .lead__img {
@@ -347,6 +355,14 @@
   .quote__author-caption {
     margin-top: 4px;
     font-size: 10px;
+  }
+  .quote:after {
+    content: "";
+    display: block;
+    width: calc(100% - 36px);
+    justify-self: center;
+    margin: 80px auto 0;
+    border: var(--lineColor) solid 1px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -698,6 +714,14 @@
   }
   .bikes__card {
     max-width: 380px;
+  }
+  .bikes:after {
+    content: "";
+    display: block;
+    width: calc(100% - 36px);
+    justify-self: center;
+    margin: 80px auto 0;
+    border: var(--lineColor) solid 1px;
   }
 }
 @media screen and (max-width: 480px) {

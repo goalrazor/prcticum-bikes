@@ -150,6 +150,10 @@
     &__title-mobile {
       @include font(32px, 1.5, 700);
     }
+
+    &:after {
+      @include blockUnderLine();
+    }
   }
 
   @include phones() {
