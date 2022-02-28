@@ -151,6 +151,7 @@
   line-height: 1.3;
   font-weight: 600;
   font-family: "Inter", "Arial", sans-serif;
+  display: flex;
   letter-spacing: 1px;
   color: #ffffff;
   width: 180px;
@@ -160,6 +161,7 @@
   border-radius: 4px;
   margin-top: 50px;
   position: relative;
+  text-decoration: none;
 }
 .lead__button:before {
   content: "";
@@ -176,6 +178,8 @@
 .lead__button:after {
   content: "Подробнее";
   position: relative;
+  top: 35%;
+  left: calc(50% - 43px);
   z-index: 2;
 }
 .lead__button:hover:before {
@@ -249,7 +253,6 @@
   .lead__button {
     width: 100%;
     justify-items: center;
-    justify-content: center;
     justify-self: center;
     margin-top: 40px;
   }
@@ -809,7 +812,7 @@
     left: 18px;
   }
   .bike-fix__img {
-    top: 200px;
+    top: 90px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -821,6 +824,7 @@
   }
   .bike-fix__img {
     width: 180px;
+    top: 50px;
   }
 }
 @media screen and (max-width: 320px) {
