@@ -1,0 +1,72 @@
+.bike-fix {
+  position: absolute;
+  box-sizing: border-box;
+  top: 100px;
+  left: -200px;
+  margin: 0;
+  height: 650px;
+  z-index: 1;
+
+  &__img {
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    cursor: auto;
+    width: 340px;
+    max-height: 260px;
+    position: sticky;
+    top: 420px;
+    bottom: 80px;
+    object-fit: cover;
+  }
+
+  @include desktopPlus() {
+    & {
+      left: -30px;
+    }
+  }
+
+  @include laptop() {
+    &__img {
+      width: 280px;
+      border-top: 10px solid #F4F4F4;
+      border-bottom: 10px solid #F4F4F4;
+      border-left: 27px solid #F4F4F4;
+      border-right: 27px solid #F4F4F4;
+      position: relative;
+      top: 0;
+    }
+  }
+
+  @include tablets() {
+    & {
+      left: 18px;
+    }
+
+    &__img {
+      top: 90px;
+    }
+  }
+
+  @include phones() {
+    & {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      top: 75px;
+    }
+
+    &__img {
+      width: 180px;
+      top: 50px;
+    }
+  }
+
+  @include phones-small() {
+    &__img {
+      top: 90px;
+    }
+  }
+}
+

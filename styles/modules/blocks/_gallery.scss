@@ -1,0 +1,52 @@
+.gallery {
+  @include flex($justify: space-between);
+  margin-top: 80px;
+  gap: 40px;
+  position: relative;
+  order: 3;
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/hw-icon.svg');
+    background-size: cover;
+  }
+
+  &__img {
+    max-width: 650px;
+    overflow: hidden;
+  }
+
+  @include laptop() {
+    &__img:last-of-type {
+      display: none;
+    }
+  }
+
+  @include tablets() {
+    & {
+      margin-top: 40px;
+    }
+
+    &__img {
+      max-width: 400px;
+    }
+
+    &__icon {
+      width: 70px;
+      height: 24px;
+    }
+  }
+
+  @include phones() {
+    &__img {
+      max-width: 284px;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.bikes {
+  margin: 120px 120px 0;
+
+
+  &__header {
+    @include flex($justify: space-between);
+  }
+
+  &__title {
+    @include font(55px, 1.1, 700);
+    letter-spacing: -0.5px;
+    margin: 0;
+  }
+
+  &__menu {
+    @include flex(center);
+    gap: 40px;
+  }
+
+  &__menu-item {
+    text-decoration: none;
+    color: var(--thirdPartColor);
+    opacity: 0.7;
+
+    &_active {
+      color: var(--secondaryColor);
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__images {
+    @include flex($justify: space-between);
+    gap: 30px;
+    margin-top: 120px;
+  }
+
+  &__card {
+    @include flex($justify: center);
+    flex-direction: column;
+    max-width: 380px;
+    text-decoration: none;
+  }
+
+  &__img {
+    max-width: 340px;
+    border: 20px solid #F4F4F4;
+    border-radius: 20px;
+    background-color: #F4F4F4;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+    cursor: pointer;
+    &:hover {
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
+    }
+  }
+
+  &__caption {
+    @include font(18px, 1.2, 600);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 22px 0 0;
+    color: var(--secondaryColor);
+    text-decoration: none;
+  }
+
+  &__selector-container {
+    display: none;
+  }
+
+  &__selector-label {
+    display: none;
+  }
+
+  @include desktopPlus() {
+
+    &__card {
+      max-width: 300px;
+    }
+
+    &__img {
+      border: 15px solid #F4F4F4;
+    }
+  }
+
+  @include desktop() {
+    &__card {
+      max-width: 254px;
+    }
+  }
+
+  @include laptop() {
+    & {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
+    &__card {
+      max-width: 200px;
+    }
+  }
+
+  @include tablets() {
+    & {
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 40px;
+    }
+
+    &_place_lead {
+      margin-top: 0;
+    }
+
+    &__selector-container {
+      display: block;
+      position: relative;
+    }
+
+    &__selector {
+      border: 1px solid #E3E3E3;
+      box-sizing: border-box;
+      border-radius: 2px;
+      background-color: transparent;
+      width: 114px;
+      height: 30px;
+      color: var(--secondaryColor);
+      padding-left: 12px;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      font-size: 11px;
+    }
+
+    &__selector-container:after {
+      content: "";
+      position: absolute;
+      @include wh(7px);
+      display: inline-block;
+      border-bottom: var(--secondaryColor) solid 2px;
+      border-right: var(--secondaryColor) solid 2px;
+      transform: rotate(45deg);
+      top: 7px;
+      left: 94px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__header {
+      flex-direction: column;
+      gap: 40px
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__card_not-active {
+      display: none;
+    }
+
+    &__images {
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    &__card {
+      max-width: 380px;
+    }
+
+    &:after {
+      @include blockUnderLine();
+    }
+  }
+
+  @include phones() {
+    & {
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+
+    &__card {
+      max-width: 280px;
+      border: 15px solid #F4F4F4;
+      border-radius: 20px;
+      background-color: #F4F4F4;
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+    }
+
+    &__img {
+      border: none;
+      box-shadow: none;
+      max-width: 254px;
+    }
+
+    &__caption {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 3px;
+    }
+  }
+}

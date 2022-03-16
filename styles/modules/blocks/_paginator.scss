@@ -1,0 +1,70 @@
+.paginator {
+  @include flex(center);
+  margin-top: 50px;
+  gap: 20px;
+  order: 4;
+
+  &__button {
+    @include wh(50px, $r: 50%);
+    background-color: var(--buttonColor);
+    border: none;
+    transition: opacity 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      outline: 1px solid var(--secondaryColor);
+    }
+  }
+
+  &__button_place_left:after {
+    content: "";
+    position: relative;
+    display: block;
+    @include wh(11px);
+    border-left: var(--secondaryColor) solid 2px;
+    border-bottom: var(--secondaryColor) solid 2px;
+    left: 15px;
+    transform: rotate(45deg);
+  }
+
+  &__button_place_right:after {
+    content: "";
+    position: relative;
+    display: block;
+    @include wh(11px);
+    border-top: var(--secondaryColor) solid 2px;
+    border-right: var(--secondaryColor) solid 2px;
+    left: 10px;
+    transform: rotate(45deg);
+  }
+
+  @include tablets() {
+    & {
+      order: 2;
+      margin: 40px 0 0 90px;
+      gap: 10px;
+      position: absolute;
+      top: 5px;
+      right: 18px;
+    }
+
+    &__button {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__button_place_left:after {
+      @include wh(7px);
+      left: 3px;
+    }
+
+    &__button_place_right:after {
+      @include wh(7px);
+      left: 0;
+    }
+  }
+}

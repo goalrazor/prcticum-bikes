@@ -1,0 +1,79 @@
+.covering {
+  @include flex();
+  flex-direction: column;
+  margin-top: 120px;
+  margin-left: 120px;
+  position: relative;
+
+  &__title {
+    @include font(55px, 1.1, 700);
+    letter-spacing: -0.5px;
+    margin: 0;
+    order: 1;
+  }
+
+  &__text {
+    @include font(18px, 1.6, 400);
+    max-width: 460px;
+    margin: 50px 0 0;
+    color: var(--thirdPartColor);
+    opacity: 0.7;
+    order: 2;
+  }
+
+  &__slide {
+    display: none;
+    flex-direction: column;
+
+    &:first-of-type {
+      display: flex;
+    }
+  }
+
+  @include laptop() {
+    & {
+      margin-left: 60px;
+    }
+  }
+
+  @include tablets() {
+    & {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      justify-self: center;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    &__title {
+      display: inline-flex;
+      font-size: 32px;
+      order: 1;
+      margin-top: 40px;
+    }
+
+    &__text {
+      order: 4;
+      max-width: 400px;
+    }
+
+    &:after {
+      @include blockUnderLine();
+      margin: 80px auto 0;
+      order: 4;
+    }
+  }
+
+  @include phones() {
+    & {
+      margin: 0 auto;
+    }
+
+    &__text {
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  }
+}

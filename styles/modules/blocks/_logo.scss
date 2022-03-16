@@ -1,0 +1,16 @@
+.logo {
+  display: none;
+
+  @include tablets() {
+    display: flex;
+    @if (var(--primaryColor) == #333333) {
+        background-image: url('../images/logo-light.svg');
+    } @else {
+        background-image: url('../images/logo.svg');
+    }
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+
+  }
+}

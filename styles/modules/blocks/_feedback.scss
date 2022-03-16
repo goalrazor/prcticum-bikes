@@ -1,0 +1,75 @@
+.feedback {
+  margin-top: 50px;
+  margin-left: 120px;
+
+  &__email {
+    @include font(13px, 2, 500);
+    background-color: var(--footerColor);
+    color: var(--secondaryColor);
+    width: 100%;
+    max-width: 360px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px var(--borderColor) solid;
+    box-sizing: border-box;
+    padding-left: 20px;
+    cursor: pointer;
+    
+
+    &::placeholder {
+      @include font(13px, 2, 500);
+      color: inherit;
+      opacity: 0.5;
+      transition: 0.5s;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px var(--borderColor) solid;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:hover::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 28px;
+    border: none;
+    position: relative;
+    left: -40px;
+    vertical-align: middle;
+    background-color: transparent;
+    color: inherit;
+    @include font(13px, 2.1, 500);
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__button_active {
+    display: inline-block;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @include tablets() {
+    & {
+      margin-top: 40px;
+      margin-left: 30px;
+    }
+  }
+
+  @include phones() {
+    & {
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+  }
+}

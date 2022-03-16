@@ -1,0 +1,29 @@
+@import "../vendor/normalize.css";
+@import "../vendor/fonts/font.css";
+
+@import "../styles/modules/variables/index";
+@import "../styles/modules/mixins/index";
+@import "../styles/modules/function/index";
+
+@import "../styles/modules/blocks/body";
+@import "../styles/modules/blocks/page";
+@import "../styles/modules/blocks/header";
+@import "../styles/modules/blocks/links";
+@import "../styles/modules/blocks/link";
+@import "../styles/modules/blocks/burger";
+@import "../styles/modules/blocks/lead";
+@import "../styles/modules/blocks/quote";
+@import "../styles/modules/blocks/covering";
+@import "../styles/modules/blocks/gallery";
+@import "../styles/modules/blocks/paginator";
+@import "../styles/modules/blocks/bikes";
+@import "../styles/modules/blocks/bike-fix";
+@import "../styles/modules/blocks/exercises";
+@import "../styles/modules/blocks/footer";
+@import "../styles/modules/blocks/feedback";
+@import "../styles/modules/blocks/toggle";
+@import "../styles/modules/blocks/line";
+@import "../styles/modules/blocks/radio";
+@import "../styles/modules/blocks/logo";
+@import "../styles/modules/blocks/popup";
+

@@ -1,0 +1,10 @@
+.line {
+
+  @include tablets() {
+    display: block;
+    width: calc(100% - 36px);
+    justify-self: center;
+    margin: 80px auto 0;
+    border: var(--lineColor) solid 1px;
+  }
+}
